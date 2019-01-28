@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="duckyAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="SeI-qU-OAc">
+                                <rect key="frame" x="182" y="162" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9Ga-EN-Mqr"/>
+                                    <constraint firstAttribute="height" constant="50" id="Gnj-JD-Tlr"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="mZY-zq-UYV">
+                                <rect key="frame" x="18" y="268" width="378" height="201"/>
+                                <color key="tintColor" red="0.19713971320000001" green="0.96431751939999999" blue="0.95425445360000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" red="0.19713971320000001" green="0.96431751939999999" blue="0.95425445360000005" alpha="0.33542915239999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="toggleDucky:" destination="BYZ-38-t0r" eventType="valueChanged" id="eXd-ry-28h"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G1-Zh-rmw">
+                                <rect key="frame" x="137" y="514" width="140" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="oeN-JA-dpc"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="bulba"/>
+                                <connections>
+                                    <action selector="bulbsaurTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aMf-7I-gx7"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bulbasaur" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nSv-gG-iDB">
+                                <rect key="frame" x="20" y="622" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mZY-zq-UYV" firstAttribute="top" secondItem="SeI-qU-OAc" secondAttribute="bottom" constant="56" id="7Ld-dF-73N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mZY-zq-UYV" secondAttribute="trailing" constant="20" id="DF2-Lj-FRb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nSv-gG-iDB" secondAttribute="trailing" constant="20" id="Fi3-yB-TKV"/>
+                            <constraint firstItem="mZY-zq-UYV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Fup-WT-xFc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mZY-zq-UYV" secondAttribute="bottom" constant="394" id="LeL-W2-fAg"/>
+                            <constraint firstItem="SeI-qU-OAc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="M5c-SK-Jcn"/>
+                            <constraint firstItem="SeI-qU-OAc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="V2i-W1-5tc"/>
+                            <constraint firstItem="mZY-zq-UYV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="meh-CV-ZPo"/>
+                            <constraint firstItem="2G1-Zh-rmw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="okJ-lc-XBb"/>
+                            <constraint firstItem="2G1-Zh-rmw" firstAttribute="centerX" secondItem="nSv-gG-iDB" secondAttribute="centerX" id="pnu-tn-a54"/>
+                            <constraint firstItem="nSv-gG-iDB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pzO-Mb-ua0"/>
+                            <constraint firstItem="2G1-Zh-rmw" firstAttribute="top" secondItem="mZY-zq-UYV" secondAttribute="bottom" constant="46" id="t2z-9i-QO4"/>
+                            <constraint firstItem="nSv-gG-iDB" firstAttribute="top" secondItem="2G1-Zh-rmw" secondAttribute="bottom" constant="8" id="zCg-yb-Pqa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bulbasaur" destination="2G1-Zh-rmw" id="G44-ci-fpe"/>
+                        <outlet property="ducky" destination="SeI-qU-OAc" id="nct-qV-O0u"/>
+                        <outlet property="pokemonLabel" destination="nSv-gG-iDB" id="ta4-id-Ho7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bulba" width="218" height="218"/>
+        <image name="duck" width="512" height="512"/>
+    </resources>
+</document>
